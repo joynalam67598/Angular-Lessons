@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
-
+  siteName: string = "Online Shopping"
 }
