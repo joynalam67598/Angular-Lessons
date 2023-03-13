@@ -137,4 +137,9 @@ export class CourseComponent {
         this.courseCountRedioButton = data;
         console.log(this.courseCountRedioButton);
     }
+
+    searchText: string = '';
+    onSearchTextEntred(data: string) {
+        this.searchText = data;
+    }
 }
