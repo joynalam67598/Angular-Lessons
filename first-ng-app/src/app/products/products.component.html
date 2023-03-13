@@ -3,8 +3,14 @@
 </div> -->
 
 <div *ngFor="let p of products; let i = index">
-    <p>{{ i }}</p>
-    <div class="product-container">
+    <!-- <p>{{ i }}</p> -->
+    <div
+        class="product-container"
+        [ngStyle]="{
+            backgroundColor:
+                p.available == 'Available' ? 'lightGreen' : 'orange'
+        }"
+    >
         <div class="image-container">
             <img
                 [src]="p.image"
@@ -17,7 +23,12 @@
                 <h6>{{ p.name }}</h6>
             </div>
             <div class="detailContainer">
-                <div class="details">
+                <div
+                    class="details"
+                    [ngStyle]="{
+                        color: p.available == 'Available' ? 'Green' : 'Red'
+                    }"
+                >
                     {{ p.available }}
                 </div>
                 <div class="details"><b>Price:</b>${{ p.price }}</div>
