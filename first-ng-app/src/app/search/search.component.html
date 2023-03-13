@@ -1,11 +1,8 @@
-<div
-    class="search-div"
-    [ngClass]="{ changeBackground: searchValue.length > 0 }"
->
-    <span><b>Search:</b></span>
-    <!-- two way data binding - combination of property binding and event binding -->
-    <input type="text" [(ngModel)]="searchValue" />
-    <span *ngIf="searchValue.length > 0"
-        >You searched for "{{ searchValue }}"</span
-    >
+<div class="serch-container">
+    <span>Search:</span>
+    <input
+        type="text"
+        [(ngModel)]="enteredSearchValue"
+        (input)="onSearchTextChanged()"
+    />
 </div>

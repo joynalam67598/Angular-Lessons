@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  slogan: string = "Shop anything";
-  source: string = "../../assets/img/shop_header.jpg";
 
-  getSlogan = () => {
-    return this.slogan;
-  }
 }
