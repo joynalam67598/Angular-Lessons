@@ -1,16 +1,10 @@
-.search-div {
-    margin: 10px 0px;
-    padding: 10px 20px;
+.serch-container{
+    margin:10px 0px;
 }
-
-input[type=text] {
+input[type=text]{
     width: 240px;
     height: 30px;
-    margin-left: 20px;
+    padding: 15px;
     border: none;
-    padding: 0 20px;
-}
-
-.changeBackground {
-    background-color: #FAD7A0;
+    margin-left:10px;
 }
