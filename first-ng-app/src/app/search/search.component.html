@@ -2,5 +2,7 @@
     <span><b>Search:</b></span>
     <!-- two way data binding - combination of property binding and event binding -->
     <input type="text" [(ngModel)]="searchValue" />
-    <span>You searched for "{{ searchValue }}"</span>
+    <span *ngIf="searchValue.length > 0"
+        >You searched for "{{ searchValue }}"</span
+    >
 </div>
