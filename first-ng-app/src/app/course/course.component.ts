@@ -130,4 +130,11 @@ export class CourseComponent {
         return this.courses.filter((c) => c.type.toLowerCase() == 'premium')
             .length;
     };
+
+    courseCountRedioButton: string = 'All';
+
+    onFilterRedioButtonChanged(data: string) {
+        this.courseCountRedioButton = data;
+        console.log(this.courseCountRedioButton);
+    }
 }

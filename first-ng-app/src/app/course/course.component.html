@@ -5,10 +5,17 @@
         [total]="getTotalCourses()"
         [free]="getTotalFreeCourses()"
         [premium]="getTotalPremiumCourses()"
+        (filterRadioButtonSelectionChange)="onFilterRedioButtonChanged($event)"
     ></app-filter>
 </div>
 <ng-container *ngFor="let course of courses">
-    <div class="course-card">
+    <div
+        class="course-card"
+        *ngIf="
+            courseCountRedioButton == 'All' ||
+            courseCountRedioButton == course.type
+        "
+    >
         <div>
             <img [src]="course.image" style="width: 220px; height: 140px" />
         </div>
