@@ -1,4 +1,7 @@
-<div class="search-div">
+<div
+    class="search-div"
+    [ngClass]="{ changeBackground: searchValue.length > 0 }"
+>
     <span><b>Search:</b></span>
     <!-- two way data binding - combination of property binding and event binding -->
     <input type="text" [(ngModel)]="searchValue" />
