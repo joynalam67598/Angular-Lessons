@@ -116,4 +116,18 @@ export class CourseComponent {
                 'In this course you will learn about reactive web development using HTML & CSS. This course will start teaching you from basics of HTML & CSS and as you progress, you will learn all the advance concepts.',
         },
     ];
+
+    getTotalCourses = () => {
+        return this.courses.length;
+    };
+
+    getTotalFreeCourses = () => {
+        return this.courses.filter((c) => c.type.toLowerCase() == 'free')
+            .length;
+    };
+
+    getTotalPremiumCourses = () => {
+        return this.courses.filter((c) => c.type.toLowerCase() == 'premium')
+            .length;
+    };
 }
