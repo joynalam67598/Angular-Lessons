@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./demo.component.css'],
 })
 export class DemoComponent {
-    sayHello(inputElement: HTMLInputElement) {
-        alert(inputElement.value);
+    sayHello() {
+        console.log('Hello from demo');
     }
 }
