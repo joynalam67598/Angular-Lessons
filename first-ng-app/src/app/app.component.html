@@ -1,10 +1,21 @@
-<div>
-    <label>DOB:</label>
-    <input type="date" #dobInput (blur)="calculateAge()" />
+<div class="container">
+    <h2>New in Smart Phones</h2>
+    <div class="more-products">
+        <app-product
+            ><h4 class="title">New in iPhone</h4>
+            <button class="btn btn-more">Show more in iPhone</button>
+        </app-product>
+        <app-product
+            ><h4 class="title">New in Samsung</h4>
+            <button class="btn btn-more">Show more in Samsung</button>
+        </app-product>
+        <app-product
+            ><h4 class="title">New in MI</h4>
+            <button class="btn btn-more">Show more in MI</button>
+        </app-product>
+        <app-product
+            ><h4 class="title">New in Oppo</h4>
+            <button class="btn btn-more">Show more in Oppo</button>
+        </app-product>
+    </div>
 </div>
-<div>
-    <label>Age:</label>
-    <input type="text" #ageInput />
-</div>
-<app-demo></app-demo>
-{{ demoComp.sayHello() }}
