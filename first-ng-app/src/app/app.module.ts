@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { DemoComponent } from './demo/demo.component';
+import { SetBackgroundDirective } from './CustomsDirectives/set-background.directive';
 
 @NgModule({
-    declarations: [AppComponent, DemoComponent],
+    declarations: [AppComponent, SetBackgroundDirective],
     imports: [BrowserModule, FormsModule],
     providers: [],
     bootstrap: [AppComponent],
