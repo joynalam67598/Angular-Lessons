@@ -7,9 +7,10 @@ import { SetBackgroundDirective } from './CustomsDirectives/set-background.direc
 import { HighlightDirective } from './CustomsDirectives/highlight.directive';
 import { HoverDirective } from './CustomsDirectives/hover.directive';
 import { BetterhighlightDirective } from './CustomsDirectives/betterhighlight.directive';
+import { ClassDirective } from './CustomsDirectives/class.directive';
 
 @NgModule({
-    declarations: [AppComponent, SetBackgroundDirective, HighlightDirective, HoverDirective, BetterhighlightDirective],
+    declarations: [AppComponent, SetBackgroundDirective, HighlightDirective, HoverDirective, BetterhighlightDirective, ClassDirective],
     imports: [BrowserModule, FormsModule],
     providers: [],
     bootstrap: [AppComponent],

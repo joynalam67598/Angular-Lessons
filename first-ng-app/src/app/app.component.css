@@ -16,3 +16,8 @@ button {
     border: none;
     background-color: #cacfd2;
 }
+
+.change-font {
+    font-size: 16px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
