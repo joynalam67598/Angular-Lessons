@@ -29,3 +29,29 @@
         angular
     </p>
 </div>
+
+<button class="btn btn-notice" (click)="displayNotice()">Show Notice</button>
+
+<!-- <div class="info-container notice" *ngIf="display; else #myVar">
+    <h3>THis is important notice!</h3>
+    <p>This is a notice issued for all website users.</p>
+    |
+    V
+</div> -->
+<!-- <ng-template #myVar>
+    <div class="info-container notice">
+        <h3>This is example paragraph.</h3>
+    </div>
+</ng-template> -->
+
+<ng-template [ngIf]="display" [ngIfElse]="myVar">
+    <div class="info-container notice">
+        <h3>THis is important notice!</h3>
+        <p>This is a notice issued for all website users.</p>
+    </div>
+</ng-template>
+<ng-template #myVar>
+    <div class="info-container notice">
+        <h3>This is example paragraph.</h3>
+    </div>
+</ng-template>
