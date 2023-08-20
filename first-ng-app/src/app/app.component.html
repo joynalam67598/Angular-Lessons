@@ -7,14 +7,25 @@
 </div>
 
 <!-- renderer -->
-<div appHighlight>
+<div appHighlight appHover>
     <p>
         This is a demo HTML content to understand custom attribute directive in
         angular
     </p>
 </div>
 
-<h2>This is appp component</h2>
-<app-demo>
-    <p #para>This is a paragraph</p>
-</app-demo>
+<div
+    class="container"
+    appBetterhighlight
+    [defaultColor]="'green'"
+    [highLightColor]="'orange'"
+>
+    <p>This is a demo HTML content to understand host binding in angular</p>
+</div>
+
+<div appClass [display]="{ container: true, 'change-font': true }">
+    <p>
+        This is a demo HTML content to create custom ngClass directive in
+        angular
+    </p>
+</div>
