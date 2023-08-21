@@ -57,7 +57,24 @@
 </ng-template> -->
 
 <!-- custom SD -->
-<div class="info-container notice" *appIf="display">
+<!-- <div class="info-container notice" *appIf="display">
     <h3>THis is important notice!</h3>
     <p>This is a notice issued for all website users.</p>
+</div> -->
+
+<!-- ngSwitch -->
+<div class="container" [ngSwitch]="occupation">
+    <p *ngSwitchCase="'teacher'">
+        This paragraph will be displayed when occupation is teacher.
+    </p>
+    <p *ngSwitchCase="'disigner'">
+        This paragraph will be displayed when occupation is disigner.
+    </p>
+    <p *ngSwitchCase="'lawyer'">
+        This paragraph will be displayed when occupation is lawyer.
+    </p>
+    <p *ngSwitchDefault>
+        This paragraph will be displayed when occupation is not mathc with any
+        switch expression.
+    </p>
 </div>
