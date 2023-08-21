@@ -10,6 +10,7 @@ export class AppComponent {
 
     inputText: string = '';
     destroy: boolean = true;
+    display: boolean = false;
 
     onSubmit(inputElement: HTMLInputElement) {
         this.inputText = inputElement.value;
@@ -17,5 +18,9 @@ export class AppComponent {
 
     destoryComponent() {
         this.destroy = false;
+    }
+
+    displayNotice() {
+        this.display = true;
     }
 }
