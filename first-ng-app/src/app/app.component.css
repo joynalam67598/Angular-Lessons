@@ -1,40 +1,5 @@
 .container {
-    margin: 20px 30px;
-    padding: 20px 20px;
-    background-color: #eee;
-    text-align: center;
-}
-input[type="text"] {
-    margin: 0px 10px;
-    width: 250px;
-    height: 24px;
-    border: none;
-}
-button {
-    width: 100px;
-    height: 25px;
-    border: none;
-    background-color: #cacfd2;
-}
-
-.change-font {
-    font-size: 16px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.info-container {
-    margin: 10px 30px;
-    padding: 10px 30px;
-}
-.btn {
-    width: 120px;
-    height: 35px;
-    border: none;
-}
-.notice {
-    background-color: cadetblue;
-}
-.btn-notice {
-    margin: 10px 30px;
-    background-color: blueviolet;
+    width: 640px;
+    margin: 10px auto;
+    display: flex;
 }

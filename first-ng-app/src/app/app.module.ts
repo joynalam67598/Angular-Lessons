@@ -3,15 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { SetBackgroundDirective } from './CustomsDirectives/set-background.directive';
-import { HighlightDirective } from './CustomsDirectives/highlight.directive';
-import { HoverDirective } from './CustomsDirectives/hover.directive';
-import { BetterhighlightDirective } from './CustomsDirectives/betterhighlight.directive';
-import { ClassDirective } from './CustomsDirectives/class.directive';
-import { IfDirective } from './CustomsDirectives/if.directive';
+import { AngularComponent } from './angular/angular.component';
+import { JavascriptComponent } from './javascript/javascript.component';
 
 @NgModule({
-    declarations: [AppComponent, SetBackgroundDirective, HighlightDirective, HoverDirective, BetterhighlightDirective, ClassDirective, IfDirective],
+    declarations: [AppComponent, AngularComponent, JavascriptComponent],
     imports: [BrowserModule, FormsModule],
     providers: [],
     bootstrap: [AppComponent],

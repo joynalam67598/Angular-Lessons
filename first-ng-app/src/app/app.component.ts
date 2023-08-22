@@ -7,21 +7,4 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class AppComponent {
     title = 'view-child';
-
-    inputText: string = '';
-    destroy: boolean = true;
-    display: boolean = false;
-    occupation: string = 'teacher';
-
-    onSubmit(inputElement: HTMLInputElement) {
-        this.inputText = inputElement.value;
-    }
-
-    destoryComponent() {
-        this.destroy = false;
-    }
-
-    displayNotice() {
-        this.display = true;
-    }
 }
