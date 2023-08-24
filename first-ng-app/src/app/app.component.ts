@@ -1,13 +1,19 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { EnrollService } from './services/enroll.service';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { UserService } from './services/user.service';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    // providers: [EnrollService], //hierarchical dependency injection. child will get this instance.
+    providers: [UserService],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     title = 'view-child';
-    constructor(private enrollService: EnrollService) {}
+
+    constructor(private userService: UserService) {}
+
+    users: { name: string; status: string }[] = [];
+    ngOnInit() {
+        this.users = this.userService.users;
+    }
 }
