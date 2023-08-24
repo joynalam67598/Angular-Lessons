@@ -11,6 +11,7 @@ export class AppComponent {
     inputText: string = '';
     destroy: boolean = true;
     display: boolean = false;
+    occupation: string = 'teacher';
 
     onSubmit(inputElement: HTMLInputElement) {
         this.inputText = inputElement.value;
