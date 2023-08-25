@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, from, of } from 'rxjs';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
     title = 'view-child';
-    myObservable = new Observable((observer) => {
+    myObservableOld = new Observable((observer) => {
         //this call back nothing but an observer who is waiting for the data/
         observer.next('1');
         observer.next('2');
@@ -18,6 +18,12 @@ export class AppComponent implements OnInit {
         observer.next('6');
         observer.complete();
     });
+
+    array1 = [1, 2, 3, 4, 5];
+    array2 = ['A', 'B', 'C'];
+
+    myObservable1 = of(this.array1, this.array2);
+    myObservable = from(this.array1);
 
     ngOnInit() {
         // this.myObservable.subscribe(next /*callback*/, error, complete);
