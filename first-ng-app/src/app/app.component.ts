@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Observable, from, of } from 'rxjs';
+import { Observable, filter, from, map, of } from 'rxjs';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -24,6 +24,14 @@ export class AppComponent implements OnInit {
 
     myObservable1 = of(this.array1, this.array2);
     myObservable = from(this.array1);
+
+    // map() -> operator -> takes input and transform it into new observable.
+    transformedObservable = this.myObservable.pipe(
+        map((value) => {
+            return value * 5;
+        }),
+        filter((val) => val >= 2)
+    );
 
     ngOnInit() {
         // this.myObservable.subscribe(next /*callback*/, error, complete);
