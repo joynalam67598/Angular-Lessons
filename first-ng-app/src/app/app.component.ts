@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Observable, filter, from, map, of } from 'rxjs';
+import { Observable, filter, from, interval, map, of } from 'rxjs';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -33,6 +33,10 @@ export class AppComponent implements OnInit {
         filter((val) => val >= 2)
     );
 
+    //unsubscribe observable
+    counterObservable = interval(1000);
+    cunsterSub: any;
+
     ngOnInit() {
         // this.myObservable.subscribe(next /*callback*/, error, complete);
         this.myObservable.subscribe(
@@ -48,6 +52,15 @@ export class AppComponent implements OnInit {
                 /*after complete observable not data will be emit */
                 console.log('Observable has complete emitting al the values.');
             }
+        );
+    }
+
+    unsubscribe() {
+        this.cunsterSub.unsubscribe();
+    }
+    subscribe() {
+        this.cunsterSub = this.counterObservable.subscribe((data) =>
+            console.log(data)
         );
     }
 }
