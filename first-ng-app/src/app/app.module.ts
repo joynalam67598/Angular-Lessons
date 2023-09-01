@@ -14,7 +14,7 @@ import { ErrorComponent } from './courses/error/error.component';
 const appRoute: Routes = [
   // { path: '', component: HomeComponent },
   //{ path: '', redirectTo: 'Home', pathMatch: 'full' },
-  { path: '', component: HomeComponent },
+  { path: 'Home', component: HomeComponent },
   { path: 'About', component: AboutComponent },
   { path: 'Contact', component: ContactComponent },
   { path: 'Courses', component: CoursesComponent },
